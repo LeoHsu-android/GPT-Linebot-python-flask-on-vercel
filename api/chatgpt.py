@@ -10,8 +10,8 @@ class ChatGPT:
     def __init__(self):
         self.prompt = Prompt()
         self.model = os.getenv("OPENAI_MODEL", default = "text-davinci-003")
-        self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 6))
-        self.frequency_penalty = float(os.getenv("OPENAI_FREQUENCY_PENALTY", default = 0.6))
+        self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 1))
+        self.frequency_penalty = float(os.getenv("OPENAI_FREQUENCY_PENALTY", default = 0.2))
         self.presence_penalty = float(os.getenv("OPENAI_PRESENCE_PENALTY", default = 0.6))
         self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 1000))
 
